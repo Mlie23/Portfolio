@@ -17,6 +17,16 @@
 /* eslint-disable */
 import {db} from "../main";
 import{ref} from 'vue';
+import userStore from "../stores/user";
+import { storeToRefs } from "pinia";
+import { router } from "../main";
+const userstate = userStore();
+storeToRefs(userstate);
+
+if (!userstate.usercred.isauthenticated)
+{
+  router.push({ path: "/login" });
+}
 
 var todos = ref([]);
 todos.value =  await db.collection('notes')
@@ -58,3 +68,4 @@ export default {
   },
 }
 </script>
+

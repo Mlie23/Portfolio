@@ -1,9 +1,7 @@
 <template>
-  <div
-    class="h-screen overflow-hidden bg-gray-400"
-  >
-    <div class=" max-w-10xl">
-      <div class="grid grid-cols-2 gap-2">
+  <div class="h-screen overflow-hidden bg-gray-400">
+    <div class="max-w-10xl">
+      <div>
         <main
           class="
             mx-auto
@@ -16,7 +14,7 @@
             xl:mt-28
           "
         >
-          <div class="sm:text-center lg:text-left">
+          <div class="text-center">
             <h1
               class="
                 text-3xl
@@ -27,174 +25,177 @@
                 md:text-6xl
               "
             >
-              <span class="block xl:inline"
-                >Think The Unthinkable</span
-              >
+              <span class="block xl:inline">Simply Notetaking</span>
             </h1>
             <p
               class="
                 mt-3
                 text-gray-200
-                sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg
+                mx-auto
                 md:mt-5 md:text-xl
                 lg:mx-0
               "
             >
-             Hi, I am Michael Lie! Welcome to my website &#128513;
+              Hi, I am Michael Lie! Welcome to my website &#128513;
             </p>
-                        <p
+            <p
               class="
                 text-gray-200
-                sm:mx-auto sm:max-w-xl sm:text-lg
-                 md:text-xl
+                mx-auto
+                md:text-xl
                 lg:mx-0
               "
             >
-              Please create an account and login to explore different features that this website offer!
+              Please create an account and login to explore different features
+              that this website offer!
             </p>
-            <div
-              class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start"
-            >
-              <!-- Verify an asset w/ a href link -->
-              <div class="rounded-md shadow">
-                <a
-                  href="#"
-                  class="
-                    flex
-                    w-full
-                    items-center
-                    justify-center
-                    rounded-md
-                    border border-transparent
-                    bg-gray-500
-                    px-8
-                    py-3
-                    text-base
-                    font-medium
-                    text-white
-                    hover:bg-gray-600
-                    md:py-4 md:px-10 md:text-lg
-                  "
-                >
-                  Database
-                </a>
-              </div>
-              <!-- learn more w/ href link -->
-              <div class="mt-3 sm:mt-0 sm:ml-3">
-                <a
-                  href="/about"
-                  class="
-                    flex
-                    w-full
-                    items-center
-                    justify-center
-                    rounded-md
-                    border border-transparent
-                    bg-oxford
-                    px-8
-                    py-3
-                    text-gray-600
-                    font-medium
-                    hover:bg-indigo-200
-                    md:py-4 md:px-10 md:text-lg
-                  "
-                >
-                  About Me
-                </a>
-              </div>
-            </div>
+
           </div>
         </main>
         <!-- Ethereum + blockchain svg -->
-        <div class="max-w-7xl">
-    
-    
-    <div
-      v-if="signup"
-    >
-          <div class="bg-grey-lighter flex flex-col">
-            <div class="container mt-1 max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
-                <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
-                    <h1 class="mb-8 text-3xl text-center">Sign up</h1>
-      <Form :validation-schema="schema" @submit="register">
-        <div>
-          <!-- <label>Name</label> -->
-          <Field
-            id="name"
-            v-model="personalInfo.name"
-            name="nameRules"
-            placeholder="Name"
-            class="block w-full rounded-lg border-2 border-box"
-          />
-          <ErrorMessage class="text-red-600" name="nameRules"></ErrorMessage>
-        </div>
-        <div>
-          <!-- <label>Email </label> -->
-          <Field
-            id="email"
-            v-model="personalInfo.email"
-            name="emailRules"
-            placeholder="Email"
-            class="mt-4 block w-full rounded-lg border-2 border-box"
-          />
-          <ErrorMessage class="text-red-600" name="emailRules"></ErrorMessage>
-        </div>
-        <div>
-          <!-- <label>Confirm Email</label> -->
-          <Field
-            id="verifyEmail"
-            v-model="personalInfo.verifyEmail"
-            name="confirmEmail"
-            placeholder="Confirm Email"
-            class="mt-4 block w-full rounded-lg border-2 border-box"
-          />
-          <ErrorMessage class="text-red-600" name="confirmEmail"></ErrorMessage>
-        </div>
-        <div>
-          <!-- <label>Username</label> -->
-          <Field
-            id="Username"
-            v-model="personalInfo.username"
-            name="usernameRules"
-            placeholder="Username"
-            class="mt-4 block w-full rounded-lg border-2 border-box"
-          />
-          <ErrorMessage
-            class="text-red-600"
-            name="usernameRules"
-          ></ErrorMessage>
-        </div>
-        <div>
-          <!-- <label>Password</label> -->
-          <Field
-            type="password"
-            id="Password"
-            v-model="personalInfo.password"
-            name="passwordRules"
-            placeholder="Password"
-            class="mt-4 block w-full rounded-lg border-2 border-box"
-          />
-          <ErrorMessage
-            class="text-red-600"
-            name="passwordRules"
-          ></ErrorMessage>
-        </div>
-        <div>
-          <!-- <label>Confirm Password</label> -->
-          <Field
-          type="password"
-            id="ConfirmPassword"
-            v-model="personalInfo.confirmPassword"
-            name="confirmPasswordRules"
-            placeholder="Confirm Password"
-            class="mt-4 block w-full rounded-lg border-2 border-box"
-          />
-          <ErrorMessage
-            class="text-red-600"
-            name="confirmPasswordRules"
-          ></ErrorMessage>
-        </div>
-        <!-- <img v-if="loading" alt="Vue logo" src="../assets/Loading.svg" />
+
+      </div>
+
+      <!-- Sponsor / Partnership!!! -->
+    </div>
+        <div class="w-full">
+                    <div
+            class="mt-1 flex flex-col justify-center items-center"
+            @click="signup = !signup"
+          >
+            <div
+              class="
+                w-14
+                h-8
+                flex
+                bg-gray-300
+                rounded-full
+                p-1
+                duration-300
+                ease-in-out
+              "
+              :class="{ 'bg-tan': signup }"
+            >
+              <div
+                class="
+                  bg-red-500
+                  w-6
+                  h-6
+                  rounded-full
+                  shadow-md
+                  transform
+                  duration-300
+                  ease-in-out
+                "
+                :class="{ 'bg-green-500 translate-x-6': signup}"
+              ></div>
+            </div>
+          </div>
+          <div v-if="signup">
+            <div class="bg-grey-lighter flex flex-col">
+              <div
+                class="
+                  container
+                  mt-1
+                  max-w-sm
+                  mx-auto
+                  flex-1 flex flex-col
+                  items-center
+                  justify-center
+                  px-2
+                "
+              >
+                <div
+                  class="bg-white px-6 py-8 rounded shadow-md text-black w-full"
+                >
+                  <h1 class="mb-8 text-3xl text-center">Sign up</h1>
+                  <Form :validation-schema="schema" @submit="register">
+                    <div>
+                      <!-- <label>Name</label> -->
+                      <Field
+                        id="name"
+                        v-model="personalInfo.name"
+                        name="nameRules"
+                        placeholder="Name"
+                        class="block w-full rounded-lg border-2 border-box"
+                      />
+                      <ErrorMessage
+                        class="text-red-600"
+                        name="nameRules"
+                      ></ErrorMessage>
+                    </div>
+                    <div>
+                      <!-- <label>Email </label> -->
+                      <Field
+                        id="email"
+                        v-model="personalInfo.email"
+                        name="emailRules"
+                        placeholder="Email"
+                        class="mt-4 block w-full rounded-lg border-2 border-box"
+                      />
+                      <ErrorMessage
+                        class="text-red-600"
+                        name="emailRules"
+                      ></ErrorMessage>
+                    </div>
+                    <div>
+                      <!-- <label>Confirm Email</label> -->
+                      <Field
+                        id="verifyEmail"
+                        v-model="personalInfo.verifyEmail"
+                        name="confirmEmail"
+                        placeholder="Confirm Email"
+                        class="mt-4 block w-full rounded-lg border-2 border-box"
+                      />
+                      <ErrorMessage
+                        class="text-red-600"
+                        name="confirmEmail"
+                      ></ErrorMessage>
+                    </div>
+                    <!-- <div>
+                      <Field
+                        id="Username"
+                        v-model="personalInfo.username"
+                        name="usernameRules"
+                        placeholder="Username"
+                        class="mt-4 block w-full rounded-lg border-2 border-box"
+                      />
+                      <ErrorMessage
+                        class="text-red-600"
+                        name="usernameRules"
+                      ></ErrorMessage>
+                    </div> -->
+                    <div>
+                      <!-- <label>Password</label> -->
+                      <Field
+                        type="password"
+                        id="Password"
+                        v-model="personalInfo.password"
+                        name="passwordRules"
+                        placeholder="Password"
+                        class="mt-4 block w-full rounded-lg border-2 border-box"
+                      />
+                      <ErrorMessage
+                        class="text-red-600"
+                        name="passwordRules"
+                      ></ErrorMessage>
+                    </div>
+                    <div>
+                      <!-- <label>Confirm Password</label> -->
+                      <Field
+                        type="password"
+                        id="ConfirmPassword"
+                        v-model="personalInfo.confirmPassword"
+                        name="confirmPasswordRules"
+                        placeholder="Confirm Password"
+                        class="mt-4 block w-full rounded-lg border-2 border-box"
+                      />
+                      <ErrorMessage
+                        class="text-red-600"
+                        name="confirmPasswordRules"
+                      ></ErrorMessage>
+                    </div>
+                    <!-- <img v-if="loading" alt="Vue logo" src="../assets/Loading.svg" />
         <img v-if="done" alt="Vue logo" src="../assets/done.svg" />
         <button
           type="button"
@@ -223,37 +224,39 @@
         >
           Submit
         </button> -->
-        <button
-          class="
-            inline-block
-            mt-3
-            px-6
-            py-2.5
-            bg-gray-500
-            text-white
-            font-medium
-            text-xs
-            leading-tight
-            uppercase
-            rounded
-            shadow-md
-            hover:bg-blue-700 hover:shadow-lg
-            focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
-            active:bg-blue-800 active:shadow-lg
-            transition
-            duration-150
-            ease-in-out
-          "
-        >
-          submit
-        </button>
-      </Form>
-
+                    <button
+                      class="
+                        inline-block
+                        mt-3
+                        px-6
+                        py-2.5
+                        bg-gray-500
+                        text-white
+                        font-medium
+                        text-xs
+                        leading-tight
+                        uppercase
+                        rounded
+                        shadow-md
+                        hover:bg-blue-700 hover:shadow-lg
+                        focus:bg-blue-700
+                        focus:shadow-lg
+                        focus:outline-none
+                        focus:ring-0
+                        active:bg-blue-800 active:shadow-lg
+                        transition
+                        duration-150
+                        ease-in-out
+                      "
+                    >
+                      submit
+                    </button>
+                  </Form>
                 </div>
+              </div>
             </div>
-          </div>
 
-      <!-- <div class="bg-grey-lighter min-h-screen flex flex-col">
+            <!-- <div class="bg-grey-lighter min-h-screen flex flex-col">
             <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
                 <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
                     <h1 class="mb-8 text-3xl text-center">Sign up</h1>
@@ -304,197 +307,244 @@
                 </div>
             </div>
         </div> -->
+          </div>
 
-        
-    </div>
-
-    <div
-      v-else-if="!signup"
-      class="flex flex-col justify-center items-center rounded-2xl z-10"
-    >
-      <div v-if="errorstate == 1">
-        <div
-          class="
-            p-4
-            mb-4
-            text-sm text-red-600
-            bg-oxford
+          <div
+            v-else
+          >
+            <div class="bg-grey-lighter flex flex-col">
+              <div
+                class="
+                  container
+                  mt-1
+                  max-w-sm
+                  mx-auto
+                  flex-1 flex flex-col
+                  items-center
+                  justify-center
+                  px-2
+                "
+              >
+                <div
+                  class="bg-white px-6 py-8 rounded shadow-md text-black w-full"
+                >
+                  <h1 class="mb-8 text-3xl text-center">Login</h1>
+                  <div v-if="errorstate == 1">
+                    <div
+                      class="
+                        p-3
+                        mb-4
+                        text-sm text-red-600
+                        bg-oxford
                         border-b border-red-500-300
-            rounded-lg
-            dark:bg-blue-200 dark:text-blue-800
-          "
-          role="alert"
-        >
-          <span class="font-medium">Warning!</span> Wrong Password.
-          <p class = "underline" @click="resetPassword">Click here to reset your password</p>
-        </div>
-      </div>
+                        rounded-lg
+                        dark:bg-blue-200 dark:text-blue-800
+                      "
+                      role="alert"
+                    >
+                      <span class="font-medium">Warning!</span> Wrong Password.
+                      <button class="underline" @click="resetPassword">
+                        Click here to reset your password
+                      </button>
+                    </div>
+                  </div>
 
-      <div v-else-if="errorstate == 3">
-        <div
-          class="
-            p-4
-            mb-4
-            text-sm text-red-600
-            bg-oxford
+                  <div v-else-if="errorstate == 3">
+                    <div
+                      class="
+                        p-3
+                        mb-4
+                        text-sm text-red-600
+                        bg-oxford
                         border-2 border-red-500
-            rounded-lg
-            dark:bg-blue-200 dark:text-blue-800
-          "
-          role="alert"
-        >
-          <span class="font-medium">Warning!</span>Reset password email has been
-          sent!
-        </div>
-      </div>
+                        rounded-lg
+                        dark:bg-blue-200 dark:text-blue-800
+                      "
+                      role="alert"
+                    >
+                      <span class="font-medium">Warning!</span>Reset password
+                      email has been sent!
+                    </div>
+                  </div>
 
-      <div v-else-if="errorstate == 4">
-        <div
-          class="
-            p-4
-            mb-4
-            text-sm text-red-600
-            bg-oxford
-            border-2 border-red-500
-            rounded-lg
-            dark:bg-blue-200 dark:text-blue-800
-          "
-          role="alert"
-        >
-          <span class="font-medium">Warning!</span>Email has not been verified!
-          Click here to 
-          <button @click="reverifyEmail" class="underline">re-verify!</button>
-        </div>
-      </div>
+                  <div v-else-if="errorstate == 4">
+                    <div
+                      class="
+                        p-3
+                        mb-4
+                        text-sm text-red-600
+                        bg-oxford
+                        border-2 border-red-500
+                        rounded-lg
+                        dark:bg-blue-200 dark:text-blue-800
+                      "
+                      role="alert"
+                    >
+                      <span class="font-medium">Warning!</span>Email has not
+                      been verified! Click here to
+                      <button @click="reverifyEmail" class="underline">
+                        re-verify!
+                      </button>
+                    </div>
+                  </div>
 
-      <div v-else-if="errorstate == 2">
-        <div
-          class="
-            p-4
-            mb-4
-            text-sm text-red-600
-            bg-oxford
-            border-2 border-red-500
-            rounded-lg
-            dark:bg-blue-200 dark:text-blue-800
-          "
-          role="alert"
-        >
-          <span class="font-medium">Warning!</span>Email not found!
-        </div>
-      </div>
-      <label>Username / Email </label>
-      <Field
-        id="username"
-        v-model="username"
-        class="block rounded-lg border-2 border-box"
-      />
-      <label>Password</label>
-      <Field
-        id="password"
-        v-model="password"
-        name="emailRules"
-        placeholder="JDoe@my.edu"
-        class="block rounded-lg border-2 border-box"
-      />
-      <img v-if="loading" alt="Vue logo" src="../assets/Loading.svg" />
-      <img v-if="done" alt="Vue logo" src="../assets/done.svg" />
-      <button
-        type="button"
-        v-if="!loading && !done"
-        @click="login"
-        class="
-          inline-block
-          mt-3
-          px-6
-          py-2.5
-          bg-blue-600
-          text-white
-          font-medium
-          text-xs
-          leading-tight
-          uppercase
-          rounded
-          shadow-md
-          hover:bg-blue-700 hover:shadow-lg
-          focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
-          active:bg-blue-800 active:shadow-lg
-          transition
-          duration-150
-          ease-in-out
-        "
-      >
-        Login
-      </button>
-      <button v-if="errorstate == 1" @click="resetPassword">Reset email</button>
-    </div>
-      <!-- Toggle button -->
+                  <div v-else-if="errorstate == 2">
+                    <div
+                      class="
+                        p-3
+                        mb-4
+                        text-sm text-red-600
+                        bg-oxford
+                        border-2 border-red-500
+                        rounded-lg
+                        dark:bg-blue-200 dark:text-blue-800
+                      "
+                      role="alert"
+                    >
+                      <span class="font-medium">Warning!</span>Email not found!
+                    </div>
+                  </div>
+                  <!-- <label>Username / Email </label> -->
+                  <Field
+                    id="Email"
+                    v-model="email"
+                    class="block w-full rounded-lg border-2 border-box"
+                    placeholder="Email"
+                  />
+                  <!-- <label>Password</label> -->
+                  <Field
+                    type="password"
+                    id="password"
+                    v-model="password"
+                    name="emailRules"
+                    placeholder="Password"
+                    class="block w-full rounded-lg border-2 border-box mt-4"
+                  />
+                  <img
+                    v-if="loading"
+                    alt="Vue logo"
+                    src="../assets/Loading.svg"
+                  />
+                  <img v-if="done" alt="Vue logo" src="../assets/done.svg" />
+                  <button
+                    type="button"
+                    v-if="!loading && !done"
+                    @click="login"
+                    class="
+                      inline-block
+                      mt-3
+                      px-6
+                      py-2.5
+                      bg-gray-500
+                      text-white
+                      font-medium
+                      text-xs
+                      leading-tight
+                      uppercase
+                      rounded
+                      shadow-md
+                      hover:bg-blue-700 hover:shadow-lg
+                      focus:bg-blue-700
+                      focus:shadow-lg
+                      focus:outline-none
+                      focus:ring-0
+                      active:bg-blue-800 active:shadow-lg
+                      transition
+                      duration-150
+                      ease-in-out
+                    "
+                  >
+                    Login
+                  </button>
+                  <button v-if="errorstate == 1" @click="resetPassword">
+                    Reset email
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Toggle button -->
 
-    <div class="mt-1 flex flex-col justify-center items-center" @click="signup = !signup">
-      <div
-        class="
-          w-14
-          h-8
-          flex
-          bg-gray-300
-          rounded-full
-          p-1
-          duration-300
-          ease-in-out
-        "
-        :class="{ 'bg-green-400': signup }"
-      >
-        <div
-          class="
-            bg-white
-            w-6
-            h-6
-            rounded-full
-            shadow-md
-            transform
-            duration-300
-            ease-in-out
-          "
-          :class="{ 'translate-x-6': signup }"
-        ></div>
-      </div>
-    </div>
-  </div>
 
         </div>
 
-        <!-- Sponsor / Partnership!!! -->
-      </div>
-
-      
-      <div class="grid grid-cols-4 gap-4 pt-10">
-        <div>
-          <!-- <h1>NoteTaking</h1> -->
-          <!-- <a href="https://opensea.io/">
+                  <div
+              class="mt-3 sm:pt-3 md:pt-5 sm:mt-0 flex justify-center"
+            >
+              <!-- Verify an asset w/ a href link -->
+              <div class="mt-3 sm:mt-0 px-4">
+                <a
+                  href="#"
+                  class="
+                    flex
+                    w-full
+                    items-center
+                    justify-center
+                    rounded-md
+                    border border-transparent
+                    bg-gray-500
+                    px-8
+                    py-3
+                    text-base
+                    font-medium
+                    text-white
+                    hover:bg-gray-600
+                    md:py-4 md:px-10 md:text-lg
+                  "
+                >
+                  Database
+                </a>
+              </div>
+              <!-- learn more w/ href link -->
+              <div class="mt-3 sm:mt-0 px-4">
+                <a
+                  href="/about"
+                  class="
+                    flex
+                    w-full
+                    items-center
+                    justify-center
+                    rounded-md
+                    border border-transparent
+                    bg-oxford
+                    px-8
+                    py-3
+                    text-gray-600
+                    font-medium
+                    hover:bg-indigo-200
+                    md:py-4 md:px-10 md:text-lg
+                  "
+                >
+                  About Me
+                </a>
+              </div>
+            </div>
+    <div class="grid grid-cols-4 gap-3 pt-10">
+      <div>
+        <!-- <h1>NoteTaking</h1> -->
+        <!-- <a href="https://opensea.io/">
             <img class="object-cover" src="@/assets/openSea.svg" />
           </a> -->
-        </div>
-        <div>
-          <!-- <a href="https://nbatopshot.com/">
+      </div>
+      <div>
+        <!-- <a href="https://nbatopshot.com/">
             <img class="object-cover" src="@/assets/topShot.svg" />
           </a> -->
-        </div>
+      </div>
 
-        <!-- These two does not work in computer-view -->
-        <div>
-          <!-- <a href="https://superrare.com/">
+      <!-- These two does not work in computer-view -->
+      <div>
+        <!-- <a href="https://superrare.com/">
             <img class="object-cover" src="@/assets/SuperRare.svg" />
           </a> -->
-        </div>
-        <div>
-          <!-- <a href="google.com">
+      </div>
+      <div>
+        <!-- <a href="google.com">
             <img class="object-cover" src="@/assets/Foundation.svg" />
           </a> -->
-        </div>
       </div>
+    </div>
   </div>
-
-  
 </template>
 
 <script>
@@ -551,7 +601,6 @@ export default {
     };
   },
   methods: {
-
     async register() {
       try {
         const firebaseAuth = getAuth();
@@ -582,13 +631,11 @@ export default {
       console.log(this.personalInfo);
       this.$emit("Callback", this.personalInfo);
     },
-        reverifyEmail(){
-                  const firebaseAuth = getAuth();
-sendEmailVerification(firebaseAuth.currentUser).then(() => {
-  
-              console.log("Verification sent!");
-            })
-              
+    reverifyEmail() {
+      const firebaseAuth = getAuth();
+      sendEmailVerification(firebaseAuth.currentUser).then(() => {
+        console.log("Verification sent!");
+      });
     },
   },
 };
@@ -600,15 +647,20 @@ import userStore from "../stores/user";
 import { storeToRefs } from "pinia";
 const userstate = userStore();
 storeToRefs(userstate);
+
+if (userstate.usercred.isauthenticated)
+{
+  router.push({path:"/hello"});
+}
 const errorstate = ref(0);
 const signup = ref(true);
-const username = ref("");
+const email = ref("");
 const password = ref("");
 const loading = ref(false);
 const done = ref(false);
 const auth = getAuth();
 function resetPassword() {
-  sendPasswordResetEmail(auth, username.value)
+  sendPasswordResetEmail(auth, email.value)
     .then(() => {
       errorstate.value = 3;
       console.log("Password email has been sent!");
@@ -624,7 +676,7 @@ function login() {
   errorstate.value = 0;
   const result = signInWithEmailAndPassword(
     auth,
-    username.value,
+    email.value,
     password.value
   )
     .then((userCredential) => {
@@ -641,7 +693,7 @@ function login() {
         errorstate.value = 4;
         console.log("User is not verified");
       }
-      // router.push({ path: "/hello" });
+      router.push({ path: "/hello"});
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -659,10 +711,6 @@ function login() {
       // console.log(errorCode);
     });
 }
-function change() {
-  signup = !signup;
-}
-
 function addData() {
   return new Promise(function (resolve) {
     setTimeout(function () {

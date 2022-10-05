@@ -11,6 +11,7 @@
     "core-js": "^3.8.3",
     "firebase": "^9.10.0",
     "firebaseauth": "^1.0.0",
+    "idle-vue": "^2.0.5",
     "pinia": "^2.0.22",
     "pinia-plugin-persistedstate": "^2.2.0",
     "vee-validate": "^4.6.9",

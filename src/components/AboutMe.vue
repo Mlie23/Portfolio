@@ -37,8 +37,8 @@
                   lg:mx-0
                 "
               >
-                I am an Undergraduate student majoring in Computer Science and
-                Mathematics at Whitworth University.
+                I am a senior undergraduate student majoring in Computer Science and
+                Mathematics at Whitworth University. I am highly involved in full-stack development projects
               </p>
             </div>
             <div class="col-span-1">
@@ -89,7 +89,7 @@
                   md:py-4 md:px-10 md:text-lg
                 "
               >
-                <img class="h-6 w-full" src="../assets/linkedin.png" />
+                <img class="h-6 w-full" src="../assets/linkedin.svg" />
               </a>
             </div>
           </div>
@@ -279,3 +279,18 @@ such as obstacles, the player(s), and health points.
     </div>
   </div>
 </template>
+
+<script setup>
+import userStore from "../stores/user";
+import { storeToRefs } from "pinia";
+// import { router } from "../main";
+const userstate = userStore();
+storeToRefs(userstate);
+
+// if (!userstate.usercred.isauthenticated)
+// {
+//   router.push({ path: "/login" });
+// }
+
+
+</script>
