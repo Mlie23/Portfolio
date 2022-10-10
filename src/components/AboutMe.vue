@@ -263,7 +263,7 @@ such as obstacles, the player(s), and health points.
           border-gray-500
         "
       >
-        <div
+        <!-- <div
           class="
             text-center text-2xl
             font-bold
@@ -274,7 +274,7 @@ such as obstacles, the player(s), and health points.
         >
           Automatic Intramural Scheduling
         </div>
-        <div class="text-center">Algorithm</div>
+        <div class="text-center">Algorithm</div> -->
       </main>
     </div>
   </div>

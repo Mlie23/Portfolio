@@ -7,7 +7,7 @@ import './index.css';
 // import VueRouter from 'vue-router'
 import { createPinia } from 'pinia'
 import { createWebHistory, createRouter } from 'vue-router';
-import NoteView from './components/NoteView.vue';
+// import NoteView from './components/NoteView.vue';
 import AddNote from './components/AddNote.vue';
 import HelloWorld from './components/HelloWorld.vue';
 import LoginView from './components/LoginView.vue';
@@ -40,11 +40,12 @@ const auth = firebase.auth();
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-  { name:"dashboard", path: "/", component: NoteView },
+  { name:"dashboard", path: "/", component: LoginView },
   { name: "note",path: "/note", component: AddNote },
   { name: "hello", path: "/hello", component: HelloWorld },
   { name: "login", path: "/login", component: LoginView },
-  { name: "about", path: "/about", component: AboutMe  }
+  { name: "about", path: "/about", component: AboutMe  },
+  {name:"unknown",path: '/:pathMatch(.*)*' , component : AboutMe}
 ]
 })
 const app = createApp(App);
