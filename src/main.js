@@ -14,7 +14,7 @@ import LoginView from './components/LoginView.vue';
 import AboutMe from './components/AboutMe.vue';
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 import userStore from "./stores/user.js"
-import VueRouter from 'vue-router';
+// import VueRouter from 'vue-router';
 
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
@@ -39,11 +39,13 @@ const auth = firebase.auth();
 // const routerHistory = createWebHistory();
 const router = createRouter({
   history: createWebHistory(),
-  routes: [{ path: "/", component: NoteView,requiresAuth:false },
+  routes: [
+  { path: "/", component: NoteView,requiresAuth:false },
   { name: "note",path: "/note", component: AddNote ,requiresAuth:false},
   { name: "hello", path: "/hello", component: HelloWorld,requiresAuth:false },
   { name: "login", path: "/login", component: LoginView,requiresAuth:false },
-  { name: "about", path: "/about", component: AboutMe }]
+  { name: "about", path: "/about", component: AboutMe }
+]
 })
 const app = createApp(App);
 // app.use(VueRouter);
@@ -68,7 +70,7 @@ router.beforeEach((to, from, next) => {
 });
 app.use(pinia);
 app.use(router);
-app.use(VueRouter);
+// app.use(VueRouter);
 
 app.mount('#app');
 
