@@ -1,12 +1,13 @@
 import { defineStore } from "pinia";
 
 
-const userinfo = defineStore('user',{
+const userinfo = defineStore('userinfo',{
     state:()=>({
         userinfo:{
-            username:null,
             name:null,
             email:null,
+            quizlet:null,
+            notes:null
         }
     }),
     actions:{
@@ -16,17 +17,20 @@ const userinfo = defineStore('user',{
         },
         logout()
         {
-            this.userinfo.username=null;
             this.userinfo.name=null;
             this.userinfo.email=null;
+            this.userinfo.quizlet=null,
+            this.userinfo.notes=null;
         },
-        fillUser(username, name, email)
+        fillUser( name, email)
         {
-            this.userinfo.username=username,
             this.userinfo.name=name,
             this.userinfo.email=email
+        },
+        fillDb(quizlet, notes){
+            this.userinfo.quizlet=quizlet,
+            this.userinfo.notes = notes
         }
-
         // setUid(Uid){
         //     this.usercred.uid=Uid;
         //     this.usercred.isauthenticated=true;
