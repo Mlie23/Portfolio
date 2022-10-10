@@ -1,6 +1,7 @@
 
 
 <template>
+
   <!-- <Header> -->
   <!-- <img alt="Vue logo" src="./assets/neural.jpg"> -->
   <div class="flex h-screen flex-col">
