@@ -6,7 +6,7 @@ import 'firebase/compat/firestore';
 import './index.css';
 // import VueRouter from 'vue-router'
 import { createPinia } from 'pinia'
-import { createWebHistory, createRouter } from 'vue-router'
+import { createWebHistory, createRouter } from 'vue-router';
 import NoteView from './components/NoteView.vue';
 import AddNote from './components/AddNote.vue';
 import HelloWorld from './components/HelloWorld.vue';
@@ -36,9 +36,9 @@ const db = firebaseApp.firestore();
 const auth = firebase.auth();
 
 
-const routerHistory = createWebHistory();
+// const routerHistory = createWebHistory();
 const router = createRouter({
-  history: routerHistory,
+  history: createWebHistory(),
   routes: [{ path: "/", component: NoteView,requiresAuth:false },
   { name: "note",path: "/note", component: AddNote ,requiresAuth:false},
   { name: "hello", path: "/hello", component: HelloWorld,requiresAuth:false },
