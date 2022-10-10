@@ -40,11 +40,11 @@ const auth = firebase.auth();
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-  { path: "/", component: NoteView,requiresAuth:false },
-  { name: "note",path: "/note", component: AddNote ,requiresAuth:false},
-  { name: "hello", path: "/hello", component: HelloWorld,requiresAuth:false },
-  { name: "login", path: "/login", component: LoginView,requiresAuth:false },
-  { name: "about", path: "/about", component: AboutMe }
+  { name:"dashboard", path: "/", component: NoteView },
+  { name: "note",path: "/note", component: AddNote },
+  { name: "hello", path: "/hello", component: HelloWorld },
+  { name: "login", path: "/login", component: LoginView },
+  { name: "about", path: "/about", component: AboutMe  }
 ]
 })
 const app = createApp(App);
