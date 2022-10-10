@@ -14,6 +14,7 @@ import LoginView from './components/LoginView.vue';
 import AboutMe from './components/AboutMe.vue';
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 import userStore from "./stores/user.js"
+import VueRouter from 'vue-router';
 
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
@@ -67,6 +68,8 @@ router.beforeEach((to, from, next) => {
 });
 app.use(pinia);
 app.use(router);
+app.use(VueRouter);
+
 app.mount('#app');
 
 
