@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full w-full overflow-hidden bg-gray-400">
+  <div class="h-screen w-screen overflow-hidden bg-gray-400">
     <div class="max-w-10xl">
       <div>
         <main
