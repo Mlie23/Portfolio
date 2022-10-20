@@ -252,30 +252,6 @@ such as obstacles, the player(s), and health points.
 ● Implemented firebase database to store account information and match history.
         </div>
       </main>
-      <main
-        class="
-          mx-auto
-          max-w-7xl
-          px-4
-          bg-gray-600
-          border-2
-          rounded-lg
-          border-gray-500
-        "
-      >
-        <!-- <div
-          class="
-            text-center text-2xl
-            font-bold
-            tracking-tight
-            text-tan
-            sm:text-xl
-          "
-        >
-          Automatic Intramural Scheduling
-        </div>
-        <div class="text-center">Algorithm</div> -->
-      </main>
     </div>
   </div>
 </template>
