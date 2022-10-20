@@ -13,7 +13,7 @@
     </h1> -->
     <!-- <h1>{{ userstate.usercred.isauthenticated }}</h1> -->
     <Suspense>
-      <main class="flex-grow">
+      <main>
         <router-view></router-view>
       </main>
     </Suspense>
